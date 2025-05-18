@@ -17,7 +17,7 @@ const PropExample2 = () => {
     favoriteColors: ["Red", "Black", "White"],
   };
 
-  const handlePress = (userName: any) => {
+  const onButtonPress = (userName: any) => {
     Alert.alert(`Viewing profile for ${userName}`);
   };
 
@@ -25,12 +25,12 @@ const PropExample2 = () => {
     <View style={styles.container}>
       <UserCard
         user={user1}
-        onButtonPress={() => handlePress(user1.name)}
+        onButtonPress={() => onButtonPress(user1.name)}
         cardStyle={{ borderColor: "gold", borderWidth: 2 }}
       />
       <UserCard
         user={user2}
-        onButtonPress={() => handlePress(user2.name)}
+        onButtonPress={() => onButtonPress(user2.name)}
         cardStyle={undefined}
       />
     </View>
