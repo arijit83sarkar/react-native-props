@@ -38,7 +38,7 @@ const PropExample5 = () => {
   ];
   return (
     <View>
-      <DataList item={data} />
+      <DataList items={data} />
     </View>
   );
 };

@@ -2,8 +2,8 @@ import React from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import { Item } from "./Item";
 
-type Props = { item: Item[] };
-const DataList = (items: Props) => {
+type propData = { items: Item[] };
+const DataList = (data: propData) => {
   const renderItem = ({ item }: { item: Item }) => (
     <View style={styles.itemContainer}>
       <Text style={styles.itemText}>{item.name}</Text>
@@ -13,7 +13,7 @@ const DataList = (items: Props) => {
 
   return (
     <FlatList
-      data={items.item}
+      data={data.items}
       renderItem={renderItem}
       keyExtractor={(item) => item.id.toString()}
     />

@@ -4,13 +4,13 @@ import { User } from "./components/User";
 import UserCard from "./components/UserCard";
 
 const PropExample2 = () => {
-  const user1: User = {
+  const firstUser: User = {
     name: "David",
     age: 25,
     isPro: false,
     favoriteColors: ["Blue", "Green"],
   };
-  const user2: User = {
+  const secondUser: User = {
     name: "Eve",
     age: 32,
     isPro: false,
@@ -24,13 +24,13 @@ const PropExample2 = () => {
   return (
     <View style={styles.container}>
       <UserCard
-        user={user1}
-        onButtonPress={() => onButtonPress(user1.name)}
+        user={firstUser}
+        onButtonPress={() => onButtonPress(firstUser.name)}
         cardStyle={{ borderColor: "gold", borderWidth: 2 }}
       />
       <UserCard
-        user={user2}
-        onButtonPress={() => onButtonPress(user2.name)}
+        user={secondUser}
+        onButtonPress={() => onButtonPress(secondUser.name)}
         cardStyle={undefined}
       />
     </View>
